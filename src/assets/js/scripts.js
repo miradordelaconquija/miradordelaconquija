@@ -62,6 +62,6 @@ window.onload = function () {
 
   setTimeout(() => {
     fadeOutElement('mouse-scroll');
-  }, 10000);
+  }, 6000);
 };
 

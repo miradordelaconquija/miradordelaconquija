@@ -4,6 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid' // a plugin!
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 import bootstrap5Plugin from '@fullcalendar/bootstrap5';
 import '../../assets/scss/fullcalendar.scss';
+import {contactData} from "../../data/data";
 
 const Calendar = () => {
   return (
@@ -26,8 +27,8 @@ const Calendar = () => {
             plugins={[dayGridPlugin, googleCalendarPlugin, bootstrap5Plugin]}
             themeSystem={'bootstrap5'}
             locale={'es'}
-            googleCalendarApiKey={'AIzaSyAKguWS1vrjWjzaSHtSFYIqL0ngrjD3s40'}
-            events={{googleCalendarId: 'peraltajavieralejandro27@gmail.com'}}
+            googleCalendarApiKey={contactData.googleCalendar.apiKey}
+            events={{googleCalendarId: contactData.googleCalendar.id}}
             initialView="dayGridMonth"
             eventClick={(info) => {
               info.jsEvent.preventDefault();
